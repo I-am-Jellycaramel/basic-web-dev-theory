@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+    <title>Message</title>
+ </head>
+ <body>
+    <script>
+        function getMessage(name) {
+            return `Hello, ${name}...`;
+        }
+        const message = getMessage('aaa');
+        document.write(message);
+
+        function postNameInfo() {
+            document.write("고민재");
+        }
+        function postDescInfo() {
+            document.write("컴퓨터공학과");
+        }
+
+        function updateEveryThreeSecond() {
+            postNameInfo();
+        }
+        setInterval(updateEveryThreeSecond, 3000);
+    </script>
+ </body>
+ </html>
