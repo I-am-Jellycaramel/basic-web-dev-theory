@@ -4,6 +4,7 @@
     <title>Message</title>
  </head>
  <body>
+    <div id="output"></div>
     <script>
         function getMessage(name) {
             return `Hello, ${name}...`;
@@ -11,17 +12,19 @@
         const message = getMessage('aaa');
         document.write(message);
 
+        const output = document.getElementById('output');
+
         function postNameInfo() {
-            document.write("고민재");
+            output.textContent = '';
+            output.textContent = '접니다.';
         }
         function postDescInfo() {
-            document.write("컴퓨터공학과");
+            output.textContent = '';
+            output.textContent = '컴퓨터공학과입니다.';
         }
 
-        function updateEveryThreeSecond() {
-            postNameInfo();
-        }
-        setInterval(updateEveryThreeSecond, 3000);
+        setInterval(()=>{postNameInfo()}, 3000);
+        setInterval(() => {postDescInfo();}, 4000);
     </script>
  </body>
  </html>
